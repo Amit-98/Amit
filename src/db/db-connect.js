@@ -12,6 +12,7 @@ let localConfig = {
   charset: "utf8mb4",
 };
 
+
 let connectSqlDb =  function () 
 {
   console.error("---DB connecting:--");
