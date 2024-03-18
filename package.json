@@ -1,7 +1,7 @@
 {
   "name": "fodadminapi",
   "version": "1.0.0",
-  "description": "School Management",
+  "description": "Books Summary Project",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"

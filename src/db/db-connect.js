@@ -6,7 +6,7 @@ let localConfig = {
   port: "3306",
   user: "root",
   password: "Amit@@0145",
-  database: "school",
+  database: "booksummary",
   multipleStatements: true,
   insecureAuth: true,
   charset: "utf8mb4",
