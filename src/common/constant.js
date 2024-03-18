@@ -1,22 +1,26 @@
 module.exports={
     JWT_SECRET_CODE: 'BHNAKGSAKJKD',
-    STATUS:
+    RESPONSE:
     {
-        SUCCESS:"Success",
-        FAILED:"Fail",
-        ERROR:"Error",
-        EXIST : "Exist",
-        AUTHORIZED:"Authorized",
-        INVALIDTOKEN:"InvalidToken",
-        TOKENEXPIRED:"TokenExpire"
-    },
-    STATUSCODE:
-    {
-        OK200:"200",
-        BADREQ400:"400",
-        ERROR500:"500",
-        UNAUTH:401,
-        EXIST : "Exist",
+        STATUSCODE:{
+            OK200:200,
+            BADREQ400:"400",
+            ERROR500:"500",
+            EXIST : "Exist",
+            FAILED:400,
+            SUCCESS:200,
+            FAILED_AUTH:401,
+        },
+
+        STATUS:{
+            SUCCESS:"Success",
+            FAILED:"Failed",
+            ERROR:"Error",
+            EXIST : "Exist",
+            AUTHORIZED:"Authorized",
+            INVALIDTOKEN:"InvalidToken",
+            TOKENEXPIRED:"TokenExpire"
+        },
     },
 
     UPLOAD_IMAGE_DESTINATION:{
@@ -29,16 +33,6 @@ module.exports={
    FILENAME:{
     CONTROLLER:"Common_use_method.js",
    },
-
-   FINAL_STATUS_CODE:{
-        OK200:200,
-        BADREQ400:"400",
-        ERROR500:"500",
-        EXIST : "Exist",
-        FAILED:400,
-        SUCCESS:200,
-        FAILED_AUTH:401,
-    },
 
     OTP_PARAMETER:{
         NUM:"0123456789",
@@ -53,38 +47,11 @@ module.exports={
     },
 
    FINAL_RESULT_MSG:{
-    USER:{
-        SIGNUP:{
-            SUCCESS:"User saved successfully.",
-            FAILED:"User not saved.",
-            EXIST:"Email already exist."
-        },
-        LOGIN:{
-            SUCCESS:"Record found successfully.",
-            FAILED:"Record not found.",
-        }
-    },
-    SCHOOL:{
-        CREATE:{
-            SUCCESS:"School saved successfully.",
-            FAILED:"School not saved.",
-        }
-    },
-    CLASS:{
-        CREATE:{
-            SUCCESS:"Class saved successfully.",
-            FAILED:"Class not saved.",
-        }
-    },
-    STUDNET:{
-        CREATE:{
-            SUCCESS:"Student saved successfully.",
-            FAILED:"Student not saved.",
-        },
-        ASSIGN:{
-            SUCCESS:"Student assigned successfully.",
-            FAILED:"Student not assigned.",
-        }
+    ADDBOOKS:{
+        SUCCESS:"Record found successfully.",
+        FAILED:"Record not found.",
+        SAVE_SUCCESS:"Book added successfully.",
+        SAVE_FAILED:"Book not saved."
     },
 
     IMAGE:{

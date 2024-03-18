@@ -1,6 +1,6 @@
 const route = require("express").Router();
-const _constant = require("../constant");
-const _dbhelper = require("../.././db/db-runner");
+const _constant = require("../constant.js");
+const _dbhelper = require("../../db/db-runner.js");
 const api_error_log_detail = require("../../db/db-schema/api_error_log_detail.js");
 const _otp_parameter = _constant.OTP_PARAMETER;
 let _status_msg = _constant.FINAL_RESULT_MSG;
@@ -97,7 +97,7 @@ function upload_image(req)
   }
 }
 
-let Save_Error_Log = (_fileName, _funName, _errorMsg, _reqJson) => {
+let saveErrorLog = (_fileName, _funName, _errorMsg, _reqJson) => {
   const myreqJSON = JSON.stringify(_reqJson.body);
   //console.log(_reqJson.body);
   if(_errorMsg>1000)
@@ -129,7 +129,7 @@ let Save_Error_Log = (_fileName, _funName, _errorMsg, _reqJson) => {
 
 module.exports = {
   OTP_Generate,
-  Save_Error_Log,
+  saveErrorLog,
   Gen_auth_token,
   Gen_invite_code,
   upload_image

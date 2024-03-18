@@ -24,9 +24,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 let errorHandler = (err, req, res, next) => {
-
-    //console.log("error log:",err.message)
-    // console.log("error_log:", typeof(err.message[0]));
     if (typeof(err.message[0]) == 'object') 
     {
         res.json(new Response('Fail', 400)
@@ -36,8 +33,6 @@ let errorHandler = (err, req, res, next) => {
     }
 
     if (err.name == 'ReferenceError') {
-        // custom application error
-        //console.log("YADAV_AMIT")
         res.json(new Response('Fail', 503)
         .setMessage(CommonHandler.ErrorMsg.internalErrorMsg)
         .setErrorMessage(err.message).build())
@@ -70,7 +65,6 @@ let errorHandler = (err, req, res, next) => {
 
     if (err.name == 'Error') {
         // custom application error
-        //console.log("YADAV_AMIT_999:");
         res.json(new Response('Fail', 503)
         .setMessage(CommonHandler.ErrorMsg.internalErrorMsg)
         .setErrorMessage(err.message).build())
